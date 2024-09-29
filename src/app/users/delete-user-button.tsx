@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { deleteUser } from "@/lib/functions/delete-user";
+import { deleteUser } from "@/lib/actions/delete-user";
 import { Loader2Icon, TrashIcon } from "lucide-react";
 import { useAction } from "next-safe-action/hooks";
 

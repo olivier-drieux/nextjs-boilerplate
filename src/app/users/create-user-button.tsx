@@ -1,7 +1,7 @@
 "use client";
 
 import { useToast } from "@/hooks/use-toast";
-import { createUser } from "@/lib/functions/create-user";
+import { createUserAction } from "@/lib/actions/create-user-action";
 import { Loader2Icon } from "lucide-react";
 import { useAction } from "next-safe-action/hooks";
 import { Button } from "../../components/ui/button";
@@ -13,7 +13,7 @@ interface CreateUserButtonProps {
 export function CreateUserButton(props: CreateUserButtonProps) {
 	const { toast } = useToast();
 
-	const action = useAction(createUser, {
+	const action = useAction(createUserAction, {
 		onSuccess: () => {
 			props.onSuccess?.();
 			toast({

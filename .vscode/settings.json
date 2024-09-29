@@ -2,5 +2,11 @@
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
     "editor.defaultFormatter": "biomejs.biome",
-    "typescript.preferences.autoImportFileExcludePatterns": ["@radix-ui"]
+    "typescript.preferences.autoImportFileExcludePatterns": ["@radix-ui", "postcss"],
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    }
 }
