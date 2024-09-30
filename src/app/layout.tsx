@@ -1,4 +1,6 @@
 import { Providers } from "@/components/providers";
+import { StackProvider, StackTheme } from "@stackframe/stack";
+import { stackServerApp } from "../stack";
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -34,12 +36,12 @@ export default function RootLayout({
 					geistMono.variable,
 					"antialiased min-h-screen w-full",
 				)}
-			>
+			><StackProvider app={stackServerApp}><StackTheme>
 				<Providers>
 					<main>{children}</main>
 					<Toaster />
 				</Providers>
-			</body>
+			</StackTheme></StackProvider></body>
 		</html>
 	);
 }
